@@ -5,7 +5,7 @@ import { useLikesContext } from '../../../contexts/LikesContext';
 jest.mock('../../../contexts/LikesContext');
 
 describe('LikesCounter', () => {
-    beforeAll(() => {
+    beforeEach(() => {
         (useLikesContext as jest.Mock).mockImplementation(() => ({
             likedProducts: {
                 '2': 'name2',

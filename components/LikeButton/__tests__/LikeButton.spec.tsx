@@ -9,7 +9,7 @@ describe('LikeButton', () => {
     const likeProductMock = jest.fn();
     const unlikeProductMock = jest.fn();
 
-    beforeAll(() => {
+    beforeEach(() => {
         (useLikesContext as jest.Mock).mockImplementation(() => ({
             likedProducts: {
                 '2': 'name2',

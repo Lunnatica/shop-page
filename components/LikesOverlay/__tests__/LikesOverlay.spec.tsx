@@ -7,7 +7,7 @@ jest.mock('../../../contexts/LikesContext');
 describe('LikesOverlay', () => {
     const unlikeProductMock = jest.fn();
 
-    beforeAll(() => {
+    beforeEach(() => {
         (useLikesContext as jest.Mock).mockImplementation(() => ({
             likedProducts: {
                 '2': 'name2',
@@ -37,7 +37,7 @@ describe('LikesOverlay', () => {
 
     it('should unlike a product when the item in the list is clicked', () => {
         render(<LikesOverlay />);
-        fireEvent.click(screen.getByText('name2'));
+        fireEvent.click(screen.getByTestId('unlike-button-2'));
         expect(unlikeProductMock).toHaveBeenCalledWith('2');
     });
 });

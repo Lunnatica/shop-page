@@ -16,6 +16,7 @@ const LikesOverlay = () => {
                     <StyledProductRow key={id}>
                         <p>{name}</p>
                         <StyledUnlikeButton
+                            data-testid={`unlike-button-${id}`}
                             aria-label={`Unlike product: ${name}`}
                             onClick={() => unlikeProduct(id)}
                         >
