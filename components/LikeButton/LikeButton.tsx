@@ -10,6 +10,7 @@ const LikeButton = ({ id, name }) => {
 
     return (
         <StyledLikeButton
+            aria-label={hasBeenLiked ? 'Unlike product' : 'Like product'}
             onClick={onClickHandler}
             data-testid={hasBeenLiked ? 'liked' : 'default'}
         >
