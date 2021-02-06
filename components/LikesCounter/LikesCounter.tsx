@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLikesContext } from '../../contexts/LikesContext';
+import { LikesOverlay } from '../LikesOverlay';
 import { StyledLikesCounter } from './StyledLikesCounter';
 
 const LikesCounter = () => {
@@ -16,10 +17,11 @@ const LikesCounter = () => {
             <StyledLikesCounter
                 onClick={handleOnClick}
                 data-testid="likes-counter"
+                aria-label={`Click to show all liked products. Currently liked: ${likesCount}`}
             >
                 👍 {likesCount}
             </StyledLikesCounter>
-            {showOverlay && <div data-testid="likes-overlay" />}
+            {showOverlay && <LikesOverlay />}
         </div>
     );
 };
