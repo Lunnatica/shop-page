@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
-const StyledLikeButton = styled.button`
-   
+interface StyledLikeButtonProps {
+    hasBeenLiked: boolean;
+}
+
+const StyledLikeButton = styled.button<StyledLikeButtonProps>`
+    background-color: ${({ hasBeenLiked }) => (hasBeenLiked ? 'red' : 'white')};
 `;
 
 export { StyledLikeButton };
