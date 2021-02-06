@@ -2,6 +2,7 @@ import { NextPageContext } from 'next';
 import Head from 'next/head';
 import { Header } from '../components/Header';
 import { SearchResultsLayout } from '../components/SearchResultsLayout';
+import { LikesContextProvider } from '../contexts/LikesContext';
 
 const MetaTags = () => {
     const metaUrl = 'http://localhost:3000/';
@@ -31,8 +32,10 @@ export default function Home({ errorCode, results }) {
     return (
         <>
             <MetaTags />
-            <Header />
-            <SearchResultsLayout errorCode={errorCode} results={results} />
+            <LikesContextProvider>
+                <Header />
+                <SearchResultsLayout errorCode={errorCode} results={results} />
+            </LikesContextProvider>
         </>
     );
 }
