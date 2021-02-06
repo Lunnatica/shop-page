@@ -10,6 +10,9 @@ const StyledLikeButton = styled.button<StyledLikeButtonProps>`
     right: 2%;
     top: 2%;
     z-index: 1;
+    min-width: 3rem;
+    min-height: 3rem;
+    font-size: larger;
 `;
 
 export { StyledLikeButton };

@@ -5,6 +5,7 @@ import {
     StyledDescription,
     StyledImgContainer,
     StyledResultCard,
+    StyledResultTitle,
     StyledResultSubdetails,
     StyledSoldOverlay,
     StyledSoldText,
@@ -34,7 +35,7 @@ const ResultCard: React.FC<SearchResult> = ({
                 )}
             </StyledImgContainer>
             <StyledDescription>
-                <p>{name}</p>
+                <StyledResultTitle>{name}</StyledResultTitle>
                 <StyledResultSubdetails>{brand}</StyledResultSubdetails>
                 <StyledResultSubdetails>{description}</StyledResultSubdetails>
                 <StyledResultSubdetails>£{price}</StyledResultSubdetails>
