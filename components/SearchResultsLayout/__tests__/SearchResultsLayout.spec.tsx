@@ -5,36 +5,30 @@ describe('<SearchResultsLayout />', () => {
     const results = [
         {
             id: '1',
-            date: '2021-01-26T11:12:05.284Z',
             name: 'Angelita Simonis',
             img: 'img',
             sold: false,
             price: '971.00',
             brand: 'Refined Plastic Chair',
             description: 'drive',
-            seller: 'Jamie_Luettgen86',
         },
         {
             id: '2',
-            date: '2021-01-26T04:43:42.363Z',
             name: 'Myrtle Beatty',
             img: 'img',
             sold: true,
             price: '397.00',
             brand: 'Gorgeous Metal Table',
             description: 'Auto Loan Account',
-            seller: 'Arvel.Stark99',
         },
         {
             id: '3',
-            date: '2021-01-25T14:12:43.310Z',
             name: 'Trenton Jerde',
             img: 'img',
             sold: true,
             price: '374.00',
             brand: 'Sleek Concrete Tuna',
             description: 'Table Synergistic Glen',
-            seller: 'Erika_Bartoletti76',
         },
     ];
     const toggleShowItems = jest.fn();

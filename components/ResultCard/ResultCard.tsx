@@ -13,14 +13,12 @@ import {
 
 const ResultCard: React.FC<SearchResult> = ({
     id,
-    date, // TODO: remove stuff I do not use
     name,
     img,
     sold,
     price,
     brand,
     description,
-    seller,
 }) => {
     return (
         <StyledResultCard sold={sold}>

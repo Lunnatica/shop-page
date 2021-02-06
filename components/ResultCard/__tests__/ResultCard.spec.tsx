@@ -3,15 +3,13 @@ import { ResultCard } from '../ResultCard';
 
 describe('<ResultCard />', () => {
     const result = {
-        id: 1,
-        date: new Date(),
+        id: '1',
         name: 'name',
         img: 'img',
         sold: false,
-        price: 123.0,
+        price: '123.0',
         brand: 'brand',
         description: 'description',
-        seller: 'seller',
     };
 
     const resultSold = { ...result, sold: true };

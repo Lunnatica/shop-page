@@ -9,14 +9,12 @@ import {
 
 interface SearchResult {
     id: string;
-    date: string;
     name: string;
     img: string;
     sold: boolean;
     price: string;
     brand: string;
     description: string;
-    seller: string;
 }
 
 interface SearchResultsLayoutProps {
@@ -56,14 +54,12 @@ const SearchResultsLayout: React.FC<SearchResultsLayoutProps> = ({
                     {results.map(
                         ({
                             id,
-                            date,
                             name,
                             img,
                             sold,
                             price,
                             brand,
                             description,
-                            seller,
                         }) => {
                             const shouldShowItem =
                                 !sold || (sold && showSoldItems);
@@ -74,14 +70,12 @@ const SearchResultsLayout: React.FC<SearchResultsLayoutProps> = ({
                                         key={id}
                                         {...{
                                             id,
-                                            date,
                                             name,
                                             img,
                                             sold,
                                             price,
                                             brand,
                                             description,
-                                            seller,
                                         }}
                                     />
                                 )
