@@ -24,7 +24,9 @@ const LikesContextProvider: React.FC = ({ children }) => {
     };
 
     const unlikeProduct = (id: string) => {
-        setLikedProducts({ ...likedProducts, [id]: undefined });
+        const updatedLikedProducts = { ...likedProducts };
+        delete updatedLikedProducts[id];
+        setLikedProducts(updatedLikedProducts);
     };
 
     return (
