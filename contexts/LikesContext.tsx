@@ -20,11 +20,11 @@ const LikesContextProvider: React.FC = ({ children }) => {
     const [likedProducts, setLikedProducts] = useState({});
 
     const likeProduct = (id: string, name: string) => {
-        setLikedProducts({ [id]: name });
+        setLikedProducts({ ...likedProducts, [id]: name });
     };
 
     const unlikeProduct = (id: string) => {
-        setLikedProducts({ [id]: undefined });
+        setLikedProducts({ ...likedProducts, [id]: undefined });
     };
 
     return (
