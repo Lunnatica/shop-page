@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { LikeButton } from '../LikeButton';
 import { SearchResult } from '../SearchResultsLayout/SearchResultsLayout';
 import {
     StyledDescription,
@@ -22,6 +23,7 @@ const ResultCard: React.FC<SearchResult> = ({
 }) => {
     return (
         <StyledResultCard sold={sold}>
+            <LikeButton id={id} name={name} />
             <StyledImgContainer>
                 <Image src={img} alt={description} width={500} height={500} />
                 {sold && (
