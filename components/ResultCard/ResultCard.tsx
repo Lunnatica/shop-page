@@ -23,8 +23,8 @@ const ResultCard: React.FC<SearchResult> = ({
 }) => {
     return (
         <StyledResultCard sold={sold}>
-            <LikeButton id={id} name={name} />
             <StyledImgContainer>
+                <LikeButton id={id} name={name} />
                 <Image src={img} alt={description} width={500} height={500} />
                 {sold && (
                     <>
