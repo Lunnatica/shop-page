@@ -10,7 +10,7 @@
     "test:watch": "npm run test -- --watchAll"
   },
   "dependencies": {
-    "@testing-library/dom": "^7.29.4",
+    "@testing-library/dom": "^7.31.2",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "babel-jest": "^26.6.3",
