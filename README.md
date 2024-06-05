@@ -1,3 +1,7 @@
+## Try it live
+
+https://shop-page-blush.vercel.app/
+
 ## Getting Started
 
 First, run the development server:
