@@ -16,7 +16,7 @@ const LikesContext = React.createContext<LikesContextType>(
     defaultContextValues
 );
 
-const LikesContextProvider: React.FC = ({ children }) => {
+const LikesContextProvider: React.FC<any> = ({ children }) => {
     const [likedProducts, setLikedProducts] = useState({});
 
     const likeProduct = (id: string, name: string) => {

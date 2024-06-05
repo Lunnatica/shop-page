@@ -43,7 +43,9 @@ export default function Home({ errorCode, results }) {
 export async function getServerSideProps(context: NextPageContext) {
     try {
         // const url = `https://5c78274f6810ec00148d0ff1.mockapi.io/api/v1/products`; // uncomment this line and comment next to use original API
-        const url = 'http://localhost:3000/api/results';
+        const baseUrl = process.env.API_BASE_URL ?? 'http://localhost:3000';
+        const url = `${baseUrl}/api/results`;
+
         const response = await fetch(url, {
             method: 'GET',
         });
